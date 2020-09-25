@@ -3,11 +3,12 @@ const db = require('./index.js');
 mongoose.Promise = global.Promise;
 
 const reviewSchema = new mongoose.Schema({
+    productID: Number,
     author: String,
     title: String,
     body: String,
     ratings:{
-        features: {
+        Features: {
             type: Number,
             default: 0
         },

@@ -1,15 +1,29 @@
 {
-  "name": "FEC",
+  "name": "reviewes",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "nodemon server/app.js",
+    "dev:react": "webpack -d --watch",
     "db:setup": "node database-mongodb/seed.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Juan Vargas",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^5.10.6"
+    "axios": "^0.17.1",
+    "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.4",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.20",
+    "moment": "^2.19.2",
+    "mongoose": "^4.11.6",
+    "mysql": "^2.14.1",
+    "nodemon": "^2.0.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "underscore": "^1.8.3"
   }
 }
