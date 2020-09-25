@@ -35,10 +35,6 @@ const reviewSchema = new mongoose.Schema({
             type: Number,
             default: 0
         }
-    },
-    image: {
-        type: String,
-        default: 'no image'
     }
 },
     {

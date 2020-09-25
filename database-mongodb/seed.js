@@ -1,27 +1,36 @@
 const db  = require('./index.js');
 const Review = require('./Review.js');
+var faker = require('faker');
 
-const sampleReviews = [
-    {
-        productID: 00,
-        author: "Juan",
-        title: "The Worst tv",
-        body: "I hated that this freaking tv does not have a colorblind mode, how incosiderate can they be. ",
-        ratings: {
-            Features: 2,
-            Performance: 4,
-            Design: 3,
-            Value: 5,
-        },
-        helpful: {
-            yes: 15,
-            no: 16
-        },
-        image: 'no image'  
-    }   
-]
+const sampleReviews = [];
 
+var randomSet = function() { 
+    var getRandomInt = function(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+    }
+    for (var a = 99; a >= 0; a--) {
+        for( var b = 0; b < getRandomInt(15); b++) {
+            var fakeReview = {};
+            fakeReview.productID = a,
+            fakeReview.author =  faker.name.findName(),
+            fakeReview.title = faker.lorem.words(),
+            fakeReview.body = faker.lorem.paragraph(),
+            fakeReview.ratings = {
+                Features: getRandomInt(6),
+                Performance: getRandomInt(6),
+                Design: getRandomInt(6),
+                Value: getRandomInt(6)
+            },
+            fakeReview.helpful = {
+                yes: getRandomInt(50),
+                no: getRandomInt(50)
+            }
+            sampleReviews.push(fakeReview)
+        }
+    }
+}
 
+randomSet()
 
 
 const insertSampleReviews = function() {
