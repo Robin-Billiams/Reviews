@@ -1,7 +1,7 @@
 const db  = require('./index.js');
 const Review = require('./Review.js');
 
-const smapleReviews =[
+const sampleReviews = [
     {
         productID: 00,
         author: "Juan",
@@ -24,9 +24,9 @@ const smapleReviews =[
 
 
 
-const insertSampleBlogs = function() {
-    Review.create(smapleReviews)
+const insertSampleReviews = function() {
+    Review.create(sampleReviews)
       .then(() => db.disconnect());
   };
   
-  insertSampleBlogs();
+  insertSampleReviews();
