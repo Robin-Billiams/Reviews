@@ -1,6 +1,6 @@
 const db  = require('./index.js');
 const Review = require('./Review.js');
-var faker = require('faker');
+const faker = require('faker');
 
 const sampleReviews = [];
 

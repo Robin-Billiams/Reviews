@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server/app.js",
+    "start": "nodemon Server/app.js",
     "dev:react": "webpack -d --watch",
     "db:setup": "node database-mongodb/seed.js"
   },
