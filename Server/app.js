@@ -7,6 +7,7 @@ const Review = require('../database-mongodb/Review.js');
 
 //MIDDLEWARE
 app.use(bodyParser.json())
+// if unsure how the code is working or what it requires check this gist https://gist.github.com/vargas055/3173a744411f52a68f5d8e8c61f3da3c
 
 //GET//
 app.get('/', (req, res) => {
@@ -14,7 +15,6 @@ app.get('/', (req, res) => {
 })
 
 app.get('/productID', (req, res) => {
-    // sample {"productID": 1}
     var id = (req.body.productID)
     Reviews.find({productID: id}, (err, data) => {
         if(err) {
@@ -27,7 +27,6 @@ app.get('/productID', (req, res) => {
 //POST//
 
 app.post('/productID', (req, res) => {
-    // take a look at the gist of a sample of what the "newPost" property must look like
     var newReview = (req.body.newPost)
     Review.create(newReview)
     .then(() => {
