@@ -21,10 +21,9 @@ var randomSet = function() {
                 Design: getRandomInt(6),
                 Value: getRandomInt(6)
             },
-            fakeReview.helpful = {
-                yes: getRandomInt(50),
-                no: getRandomInt(50)
-            }
+            fakeReview.yes = getRandomInt(50),
+            fakeReview.no = getRandomInt(50)
+            
             sampleReviews.push(fakeReview)
         }
     }

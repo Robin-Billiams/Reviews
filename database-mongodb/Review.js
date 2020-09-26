@@ -26,16 +26,15 @@ const reviewSchema = new mongoose.Schema({
         }
     },
 
-    helpful: {
-        yes: {
-            type: Number,
-            default: 0
-        },
-        no: {
-            type: Number,
-            default: 0
-        }
+    yes: {
+        type: Number,
+        default: 0
+    },
+    no: {
+        type: Number,
+        default: 0
     }
+    
 },
     {
         timestamps: true
