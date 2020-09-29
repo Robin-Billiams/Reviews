@@ -4,9 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon Server/app.js",
+    "start": "nodemon Server/server.js",
     "dev:react": "webpack -d --watch",
-    "db:setup": "node database-mongodb/seed.js"
+    "db:setup": "node database-mongodb/seed.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "Juan Vargas",
@@ -25,5 +26,12 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^26.4.2",
+    "superagent": "^6.1.0",
+    "supertest": "^5.0.0"
   }
 }
