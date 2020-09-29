@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3001
+
 const Reviews = require('../database-mongodb/Review.js');
 const bodyParser = require('body-parser');
 const Review = require('../database-mongodb/Review.js');
@@ -64,7 +64,7 @@ app.patch('/productID', (req, res) => {
 })
 
 
-//OTHERS
-app.listen(port, () => {
-    console.log(`Reviews module server listening on http://localhost:${port}`)
-})
+
+
+
+module.exports = app;
