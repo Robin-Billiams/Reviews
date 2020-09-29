@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server/app.js",
+    "start": "nodemon Server/app.js",
     "dev:react": "webpack -d --watch",
     "db:setup": "node database-mongodb/seed.js"
   },
@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.17.1",
-    "body-parser": "^1.17.2",
+    "body-parser": "^1.19.0",
     "bootstrap": "^3.3.7",
     "express": "^4.15.4",
     "faker": "^5.1.0",
