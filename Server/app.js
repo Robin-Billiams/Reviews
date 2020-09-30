@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 
-const Reviews = require('../database-mongodb/Review.js');
 const bodyParser = require('body-parser');
 const Review = require('../database-mongodb/Review.js');
 
@@ -16,9 +15,29 @@ app.get('/', (req, res) => {
 
 app.get('/productID', (req, res) => {
     var id = (req.body.productID)
-    Reviews.find({productID: id}, (err, data) => {
+    Review.find({productID: id}, (err, data) => {
         if(err) {
             console.log(err)
+        }
+        res.send(data)
+    })
+})
+
+app.get('/productID/title', (req, res) => {
+    var reviewTitle = (req.body.title)
+    Review.find({title: reviewTitle}, (err, data) => {
+        if(err) {
+            console.log('couldnt find review with title:', reviewTitle)
+        }
+        res.send(data)
+    })
+})
+
+app.delete('/productID/title', (req, res) => {
+    var reviewTitle = (req.body.title)
+    Review.deleteMany({title: reviewTitle}, (err, data) => {
+        if(err) {
+            console.log('couldnt find review with title:', reviewTitle)
         }
         res.send(data)
     })
@@ -48,7 +67,7 @@ app.patch('/productID', (req, res) => {
                 console.log('error:', err)
                 res.end()
             } else {
-                res.send('succes!')
+                res.send(response)
             }
         })
     } else {
@@ -57,7 +76,7 @@ app.patch('/productID', (req, res) => {
                 console.log('error:', err)
                 res.end()
             } else {
-                res.send('succes!')
+                res.send(response)
             }
         })
     }   

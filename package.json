@@ -13,6 +13,7 @@
   "author": "Juan Vargas",
   "license": "ISC",
   "dependencies": {
+    "@shelf/jest-mongodb": "^1.2.3",
     "axios": "^0.17.1",
     "body-parser": "^1.19.0",
     "bootstrap": "^3.3.7",
