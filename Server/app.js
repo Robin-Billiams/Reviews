@@ -7,7 +7,7 @@ const Review = require('../database-mongodb/Review.js');
 //MIDDLEWARE
 app.use(bodyParser.json())
 // if unsure how the code is working or what it requires check this gist https://gist.github.com/vargas055/3173a744411f52a68f5d8e8c61f3da3c
-
+app.use(express.static(__dirname + '/../react-client/dist'))
 //GET//
 app.get('/', (req, res) => {
     res.send('hello world')
@@ -81,9 +81,6 @@ app.patch('/productID', (req, res) => {
         })
     }   
 })
-
-
-
 
 
 module.exports = app;
