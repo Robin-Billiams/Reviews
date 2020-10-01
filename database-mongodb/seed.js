@@ -1,17 +1,16 @@
 const db  = require('./index.js');
 const Review = require('./Review.js');
 const faker = require('faker');
-const mongoose = require('mongoose');
 
 const sampleReviews = [];
 
-var randomSet = function() { 
-    var getRandomInt = function(max) {
+let randomSet = function() { 
+    let getRandomInt = function(max) {
         return Math.floor(Math.random() * Math.floor(max));
     }
-    for (var a = 99; a >= 0; a--) {
-        for( var b = 0; b < getRandomInt(50); b++) {
-            var fakeReview = {};
+    for (let a = 99; a >= 0; a--) {
+        for( let b = 0; b < getRandomInt(15); b++) {
+            let fakeReview = {};
             fakeReview.productID = a,
             fakeReview.author =  faker.name.findName(),
             fakeReview.title = faker.lorem.words(),
@@ -35,8 +34,7 @@ randomSet()
 
 const insertSampleReviews = function() {
     Review.create(sampleReviews)
-      .then(() => mongoose.connection.close())
-      .catch(err => console.log('there was an error', err))
+      .then(() => db.disconnect());
   };
   
   insertSampleReviews();
