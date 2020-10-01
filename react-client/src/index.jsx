@@ -1,6 +1,7 @@
 const axios = require('axios');
 import React from 'react';
 import ReactDOM from 'react-dom';
+import OverAllRatings from './Components/OverAllRatings.jsx';
 
 class ReviewsModule extends React.Component {
     constructor() {
@@ -9,7 +10,8 @@ class ReviewsModule extends React.Component {
             error: null,
             listNumber: 1,
             currentList: [],
-            reviewsLoaded: false
+            reviewsLoaded: false,
+            rating: 1
         }
     }
 
@@ -21,10 +23,23 @@ class ReviewsModule extends React.Component {
         axios.get('/productID', {params:{"productID": this.state.listNumber}})
         .then(
             (response) => {
-                console.log('this is the current response:', response)
+                let rate = 0
+                function ratingGen () {
+                    response.data.map(rating => {
+                        let overall = 0;
+                        overall += rating.ratings.Design
+                        overall += rating.ratings.Features
+                        overall += rating.ratings.Performance
+                        overall += rating.ratings.Value
+                        rate += overall/4
+                    })
+                    rate = (rate/response.data.length).toFixed(2)
+                }
+                ratingGen()
                 this.setState({
                     reviewsLoaded: true,
-                    currentList: response 
+                    currentList: response.data, 
+                    rating: rate
                 });
             },
             (error) => {
@@ -44,7 +59,7 @@ class ReviewsModule extends React.Component {
         } else {
             return (
                 <div> 
-                    <div>overall rating,starts, line, number of reviews</div>
+                    <OverAllRatings rating ={this.state.rating}/>
                     <div>search bar</div>
                     <div>
                         <div>Reviews</div>
