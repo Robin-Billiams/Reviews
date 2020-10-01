@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/productID', (req, res) => {
-    var id = (req.body.productID)
+    var id = (req.query.productID)
     Review.find({productID: id}, (err, data) => {
         if(err) {
             console.log(err)
