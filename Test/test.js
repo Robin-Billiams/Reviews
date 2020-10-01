@@ -13,7 +13,7 @@ test('0. Sample test should be equal', () => {
 })
 
 describe(" Test the API requests", () => {
-    var id = 0
+    let id = 0
     test("1. It should return a JSON with the designated properties",  () => {
         return request(app)  
         .get("/productID")

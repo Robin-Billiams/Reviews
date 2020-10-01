@@ -6,7 +6,7 @@ const Review = require('../database-mongodb/Review.js');
 
 //MIDDLEWARE
 app.use(bodyParser.json())
-// if unsure how the code is working or what it requires check this gist https://gist.github.com/vargas055/3173a744411f52a68f5d8e8c61f3da3c
+// if unsure how the code is working or what it requires check this gist https://gist.github.com/letgas055/3173a744411f52a68f5d8e8c61f3da3c
 app.use(express.static(__dirname + '/../react-client/dist'))
 //GET//
 app.get('/', (req, res) => {
@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/productID', (req, res) => {
-    var id = (req.body.productID)
+    let id = (req.body.productID)
     Review.find({productID: id}, (err, data) => {
         if(err) {
             console.log(err)
@@ -24,7 +24,7 @@ app.get('/productID', (req, res) => {
 })
 
 app.get('/productID/title', (req, res) => {
-    var reviewTitle = (req.body.title)
+    let reviewTitle = (req.body.title)
     Review.find({title: reviewTitle}, (err, data) => {
         if(err) {
             console.log('couldnt find review with title:', reviewTitle)
@@ -34,7 +34,7 @@ app.get('/productID/title', (req, res) => {
 })
 
 app.delete('/productID/title', (req, res) => {
-    var reviewTitle = (req.body.title)
+    let reviewTitle = (req.body.title)
     Review.deleteMany({title: reviewTitle}, (err, data) => {
         if(err) {
             console.log('couldnt find review with title:', reviewTitle)
@@ -46,7 +46,7 @@ app.delete('/productID/title', (req, res) => {
 //POST//
 
 app.post('/productID', (req, res) => {
-    var newReview = (req.body.newPost)
+    let newReview = (req.body.newPost)
     Review.create(newReview)
     .then(() => {
         res.send('post succesfull!!')
@@ -60,7 +60,7 @@ app.post('/productID', (req, res) => {
 
 //PATCH//
 app.patch('/productID', (req, res) => {
-    var updateId = (req.body.updateValue._id)
+    let updateId = (req.body.updateValue._id)
     if(req.body.updateValue.updateVal === "yes") {
         Review.findOneAndUpdate({_id: updateId}, {$inc: {yes: 1}}, {new: true}, (err, response) => {
             if (err) {

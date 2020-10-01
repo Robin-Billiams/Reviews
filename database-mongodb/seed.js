@@ -4,13 +4,13 @@ const faker = require('faker');
 
 const sampleReviews = [];
 
-var randomSet = function() { 
-    var getRandomInt = function(max) {
+let randomSet = function() { 
+    let getRandomInt = function(max) {
         return Math.floor(Math.random() * Math.floor(max));
     }
-    for (var a = 99; a >= 0; a--) {
-        for( var b = 0; b < getRandomInt(15); b++) {
-            var fakeReview = {};
+    for (let a = 99; a >= 0; a--) {
+        for( let b = 0; b < getRandomInt(15); b++) {
+            let fakeReview = {};
             fakeReview.productID = a,
             fakeReview.author =  faker.name.findName(),
             fakeReview.title = faker.lorem.words(),
