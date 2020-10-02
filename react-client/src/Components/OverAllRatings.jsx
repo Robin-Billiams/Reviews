@@ -2,11 +2,8 @@ import React from 'react'
 import Rating from 'react-rating';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-    faStar as faStarRegular
-  } from '@fortawesome/free-regular-svg-icons';
-  import {
-    faStar as faStarSolid
-  } from '@fortawesome/free-solid-svg-icons';
+  faStar as faStarSolid
+} from '@fortawesome/free-solid-svg-icons';
 
 function OverAllRatings(props) {
 
@@ -17,8 +14,8 @@ function OverAllRatings(props) {
         <div className="header1">
             <Rating
             initialRating={rating}
-            emptySymbol={<FontAwesomeIcon icon={faStarRegular} />}
-            fullSymbol={<FontAwesomeIcon icon={faStarSolid} />}
+            emptySymbol={<FontAwesomeIcon icon={faStarSolid} style={{color: "#ccc"}}/>}
+            fullSymbol={<FontAwesomeIcon icon={faStarSolid} style={{color: "yellow"}}/>}
             fractions={1000}
             readonly
             />

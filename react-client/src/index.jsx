@@ -68,7 +68,7 @@ class ReviewsModule extends React.Component {
                         <div>two conatiners with number of reviews for each star on the left, and avergae custome ratings</div>
                     </div>
                     <div>
-                        <Reviews/>
+                        <Reviews reviews={this.state.currentList}/>
                     </div>
                 </div>
             )
