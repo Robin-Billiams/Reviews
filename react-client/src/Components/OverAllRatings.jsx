@@ -14,14 +14,13 @@ function OverAllRatings(props) {
         <div className="header1">
             <Rating
             initialRating={rating}
-            emptySymbol={<FontAwesomeIcon icon={faStarSolid} style={{color: "#ccc"}}/>}
-            fullSymbol={<FontAwesomeIcon icon={faStarSolid} style={{color: "yellow"}}/>}
+            emptySymbol={<FontAwesomeIcon icon={faStarSolid} style={{color: "#cecece"}}/>}
+            fullSymbol={<FontAwesomeIcon icon={faStarSolid} style={{color: "#fdd361"}}/>}
             fractions={1000}
             readonly
-            />
-            {rating}
+            />  {rating}
         </div>
-        <div className="header2">
+        <div className="header2" >
              {list.length} Reviews
         </div>
     </div>

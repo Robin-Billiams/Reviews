@@ -1,20 +1,51 @@
+.allThefont {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topContainer {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
 .searchButton {
   border: none;
   height: 20px;
   width: 45px;
-  border-radius: 3px;
-}
-.searchBar {
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+.search-borders{
+  border-top-color: #eeeeee;
+  border-top-style: solid;
+  border-bottom-color: #eeeeee;
+  border-bottom-style: solid;
+  border-width: thin;
+}
+
+.searchBar {
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 5px;
+  margin-top: 5px;
+
+}
+
+.bold{
+  font-weight: 500; 
+}
 .capitalize {
   text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .header1 {
   text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .header2 {
   border-left-style: solid;
@@ -23,20 +54,23 @@
   border-width: thin;
   padding-left: 5px;
   color: rgb(74, 74, 241);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .grid-container-top {
-  max-width: 200px;
+  max-width: 215px;
   display: grid;
   grid-template-columns: auto auto;
   text-align: left;
   padding: 0px;
   margin: 0px;
   column-gap: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 15px;
 }
 
 .grid-container-reviews-top {
-  max-width: 200px;
+  max-width: 220px;
   display: grid;
   grid-template-columns: auto auto auto;
   text-align: left;
@@ -45,18 +79,85 @@
   margin-top: 15px;
   column-gap: 0px;
   font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .grayFont {
-  color: gray;
+  color: #787878;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.grid-container-Ratings {
+.grid-container-Share {
   display: grid;
-  grid-template-rows: auto auto auto auto;
+  grid-template-columns: auto auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sharebutton {
+  border: none;
+  height: 30px;
+  width: 280px;
+  border-radius: 20px;
+  background-color: #087ac8;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin-left: auto;
+}
+
+.grid-container-AverageCustomerRatings-top-component {
+  display: grid;
+  max-width: 1200px;
+  grid-template-columns: auto auto;
+}
+
+.grid-container-AverageCustomerRatings {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 120px 200px auto;
+}
+.centerContent {
+  display: flex;
+  align-items: center;
+}
+
+.grid-container-Ratings-★{
+  display: grid;
+  grid-template-columns: 50px 200px auto;
+}
+
+.grid-container-Ratings-overall{
+  display: grid;
+  grid-template-columns: 120px 200px auto;
+}
+.grid-container-Ratings-overall-text {
+  color: #787878;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  transform: translateY(15px);
+}
+.averageCustomerRating{
+  color: #787878;
+  font-family: Arial;
+}
+
+.grid-container-★ {
+  display: grid;
+  grid-template-rows: 30px 30px 30px 30px 30px;
   font-size: 40px;
   grid-row-gap: 0px;
   padding: 0px;
   margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-container-Ratings {
+  display: grid;
+  grid-template-rows: 30px 30px 30px 30px;
+  font-size: 40px;
+  grid-row-gap: 0px;
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .grid-container-Ratings-Spacing {
   display: grid;
@@ -64,43 +165,55 @@
   grid-row-gap: 0px;
   padding: 0px;
   margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .ratingsText {
-  color: gray;
-  font-size: 10px;
+  color: #787878;
+  font-size: 15px;
   padding: 0px;
   margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: translateY(15px);
 }
 
 .grid-container-Ratings-Body{
-  max-width: 800px;
+  max-width: 1500px;
   display: grid;
-  grid-template-columns: auto auto ;
+  grid-template-columns: auto 400px ;
   padding-bottom: 0px;
   margin-bottom: 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .grid-container-helpful{
   max-width: 200px;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 65px 75px 75px 65px;
   text-align: left;
   padding: 0px;
   margin: 0px;
   column-gap: 0px;
-  font-size: 10px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 45px;
+}
+
+.Reviews-conatiner {
+  margin-top: 70px;
 }
 
 .helpfulButtons {
   border: none;
-  height: 15px;
-  width: 54px;
-  border-radius: 3px;
-  font-size: 10px;
+  height: 20px;
+  width: 70px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  
 }
 
 .margin-padding {
   padding:0px;
   margin:0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 

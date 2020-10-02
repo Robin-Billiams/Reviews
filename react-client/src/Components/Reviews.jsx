@@ -9,9 +9,8 @@ import {
 
 
 function Reviews(props) {
-    console.log(props)
     return (
-        <div>
+        <div className="Reviews-conatiner">
             {props.reviews.map((review, index)=> {
                 let rate = 0
                 function raterInd(){
@@ -26,34 +25,34 @@ function Reviews(props) {
                     rate = (rate).toFixed(1)
                 }
                 raterInd()
-                console.log(review.ratings)
                 return (
                     <div key={index}>
                         <div className="grid-container-reviews-top">
                             <div>
                                 <Rating
                                 initialRating={rate}
-                                emptySymbol={<FontAwesomeIcon icon={faStarSolid} style={{color: "#ccc"}}/>}
-                                fullSymbol={<FontAwesomeIcon icon={faStarSolid} style={{color: "yellow"}}/>}
+                                emptySymbol={<FontAwesomeIcon icon={faStarSolid} style={{color: "#cecece"}}/>}
+                                fullSymbol={<FontAwesomeIcon icon={faStarSolid} style={{color: "#fdd361"}}/>}
                                 fractions={1000}
                                 readonly
                                 />
                             </div>
-                            <div>{review.author}</div>
+                            <div className="bold">{review.author}</div>
                             <div className="grayFont"> {moment(review.createdAt).fromNow()}</div>
                         </div>
-                        <div className="capitalize">{review.title}</div>
-                        <div className="grid-container-Ratings-Body">
-                            <div className="grayFont">{review.body}</div>
-                            <Sidebars ratings = {review.ratings}/>
+                        <div>
+                            <div className="capitalize">{review.title}</div>
+                            <div className="grid-container-Ratings-Body">
+                                <div className="grayFont" style={{fontSize: "15px"}}>{review.body}</div>
+                                <Sidebars ratings = {review.ratings}/>
+                            </div>
+                            <div className="grid-container-helpful"> 
+                                <div >Helpful?</div>
+                                <button className="helpfulButtons">Yes . {<span style={{color: "red"}}> {review.yes} </span>}</button>
+                                <button className="helpfulButtons">No . {<span style={{color: "red"}}> {review.no} </span>}</button>
+                                <button className="helpfulButtons">Report</button>
+                            </div>
                         </div>
-                        <div className="grid-container-helpful"> 
-                            <div >Helpful?</div>
-                            <button className="helpfulButtons">Yes . {<span style={{color: "red"}}> {review.yes} </span>}</button>
-                            <button className="helpfulButtons">No . {<span style={{color: "red"}}> {review.no} </span>}</button>
-                            <button className="helpfulButtons">Report</button>
-                        </div>
-
                     </div>
                 )
             })}

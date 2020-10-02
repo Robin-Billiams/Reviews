@@ -14,8 +14,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
             <div className="ratingsText"> Features</div>
                 <Rating
                     initialRating={props.ratings.Features}
-                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#ccc"}}/>}
-                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "yellow"} }/>}
+                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#cecece"}}/>}
+                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#fdd361"} }/>}
                     fractions={1000}
                     readonly
                 />
@@ -24,18 +24,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
                 <div className="ratingsText"> Performance</div>
                 <Rating
                     initialRating={props.ratings.Performance}
-                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#ccc", margin: "0px"}}/>}
-                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "yellow"} }/>}
+                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#cecece", margin: "0px"}}/>}
+                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#fdd361"} }/>}
                     fractions={1000}
                     readonly
                 />
             </div>
             <div className="grid-container-Ratings-Spacing">
-            <   div  className="ratingsText"> Desing</div>
+            <   div  className="ratingsText"> Design</div>
                 <Rating
-                    initialRating={props.ratings.Desing}
-                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#ccc"}}/>}
-                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "yellow"} }/>}
+                    initialRating={props.ratings.Design}
+                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#cecece"}}/>}
+                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#fdd361"} }/>}
                     fractions={1000}
                     readonly
                 />
@@ -44,8 +44,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
                 <div className="ratingsText"> Value</div>
                 <Rating
                     initialRating={props.ratings.Value}
-                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#ccc"}}/>}
-                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "yellow"} }/>}
+                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#cecece"}}/>}
+                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#fdd361"} }/>}
                     fractions={1000}
                     readonly
                 />
