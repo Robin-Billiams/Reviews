@@ -2,6 +2,7 @@ const axios = require('axios');
 import React from 'react';
 import ReactDOM from 'react-dom';
 import OverAllRatings from './Components/OverAllRatings.jsx';
+import SearchBar from './Components/SearchBar.jsx'
 
 class ReviewsModule extends React.Component {
     constructor() {
@@ -33,7 +34,7 @@ class ReviewsModule extends React.Component {
                         overall += rating.ratings.Value
                         rate += overall/4
                     })
-                    rate = (rate/response.data.length).toFixed(2)
+                    rate = (rate/response.data.length).toFixed(1)
                 }
                 ratingGen()
                 this.setState({
@@ -59,8 +60,8 @@ class ReviewsModule extends React.Component {
         } else {
             return (
                 <div> 
-                    <OverAllRatings rating ={this.state.rating}/>
-                    <div>search bar</div>
+                    <OverAllRatings rating={this.state.rating} currentList={this.state.currentList}/>
+                    <SearchBar/>
                     <div>
                         <div>Reviews</div>
                         <div>two conatiners with number of reviews for each star on the left, and avergae custome ratings</div>
