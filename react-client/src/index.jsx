@@ -1,6 +1,7 @@
 const axios = require('axios');
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Reviews from './Components/Reviews.jsx'
 
 class ReviewsModule extends React.Component {
     constructor() {
@@ -51,12 +52,7 @@ class ReviewsModule extends React.Component {
                         <div>two conatiners with number of reviews for each star on the left, and avergae custome ratings</div>
                     </div>
                     <div>
-                        <div>list of reviews and side element got features rating
-                            <div>star rating, author, time ago</div>
-                            <div>title</div>
-                            <div>body</div>
-                            <div>helpful? yes or no</div>
-                        </div>
+                        <Reviews/>
                     </div>
                 </div>
             )
