@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "browser": { "fs": false, "path": false, "os": false},
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "scripts": {
     "start": "nodemon Server/server.js",
     "dev:react": "webpack -d --watch",
@@ -14,6 +18,11 @@
   "author": "Juan Vargas",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.31",
+    "@fortawesome/free-regular-svg-icons": "^5.15.0",
+    "@fortawesome/free-solid-svg-icons": "^5.15.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@shelf/jest-mongodb": "^1.2.3",
     "axios": "^0.20.0",
     "body-parser": "^1.19.0",
@@ -28,6 +37,8 @@
     "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-rating": "^2.0.5",
+    "react-star-rating-component": "^1.4.1",
     "underscore": "^1.11.0"
   },
   "devDependencies": {
