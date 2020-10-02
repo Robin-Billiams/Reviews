@@ -1,6 +1,8 @@
 const axios = require('axios');
 import React from 'react';
 import ReactDOM from 'react-dom';
+import OverAllRatings from './Components/OverAllRatings.jsx';
+import SearchBar from './Components/SearchBar.jsx'
 import Reviews from './Components/Reviews.jsx'
 
 class ReviewsModule extends React.Component {
@@ -10,7 +12,8 @@ class ReviewsModule extends React.Component {
             error: null,
             listNumber: 1,
             currentList: [],
-            reviewsLoaded: false
+            reviewsLoaded: false,
+            rating: 1
         }
     }
 
@@ -22,10 +25,23 @@ class ReviewsModule extends React.Component {
         axios.get('/productID', {params:{"productID": this.state.listNumber}})
         .then(
             (response) => {
-                console.log('this is the current response:', response)
+                let rate = 0
+                function ratingGen () {
+                    response.data.map(rating => {
+                        let overall = 0;
+                        overall += rating.ratings.Design
+                        overall += rating.ratings.Features
+                        overall += rating.ratings.Performance
+                        overall += rating.ratings.Value
+                        rate += overall/4
+                    })
+                    rate = (rate/response.data.length).toFixed(1)
+                }
+                ratingGen()
                 this.setState({
                     reviewsLoaded: true,
-                    currentList: response 
+                    currentList: response.data, 
+                    rating: rate
                 });
             },
             (error) => {
@@ -45,8 +61,8 @@ class ReviewsModule extends React.Component {
         } else {
             return (
                 <div> 
-                    <div>overall rating,starts, line, number of reviews</div>
-                    <div>search bar</div>
+                    <OverAllRatings rating={this.state.rating} currentList={this.state.currentList}/>
+                    <SearchBar/>
                     <div>
                         <div>Reviews</div>
                         <div>two conatiners with number of reviews for each star on the left, and avergae custome ratings</div>
