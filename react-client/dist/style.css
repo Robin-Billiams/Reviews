@@ -1,18 +1,19 @@
-.allThefont {
+.all-The-font {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.topContainer {
-  margin-left: 50px;
-  margin-right: 50px;
+.top-Container {
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 
-.searchButton {
+.search-Button {
   border: none;
-  height: 20px;
-  width: 45px;
+  height: 35px;
+  width: 90px;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
 
 .search-borders{
@@ -23,24 +24,25 @@
   border-width: thin;
 }
 
-.searchBar {
+.search-Bar {
+  height: 30px;
   border: 1px solid #eeeeee;
   border-radius: 3px;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 5px;
   margin-top: 5px;
-
+  width: 500px;
 }
 
 .bold{
-  font-weight: 500; 
+  font-weight: 400; 
 }
 .capitalize {
   text-transform: capitalize;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight: 600;
+  margin-bottom: 0px;
+  font-weight: 500;
 }
 
 .header1 {
@@ -67,23 +69,30 @@
   column-gap: 0px;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 15px;
+  margin-top: 60px;
 }
 
 .grid-container-reviews-top {
-  max-width: 220px;
-  display: grid;
-  grid-template-columns: auto auto auto;
+  max-width: 290px;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto auto auto ;
   text-align: left;
-  padding: 0px;
-  margin: 0px;
-  margin-top: 15px;
-  column-gap: 0px;
-  font-size: 10px;
+  margin-top: 25px;
+  gap: 5px;
+  font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
+  
 }
-.grayFont {
+.gray-Font {
   color: #787878;
   font-family: Arial, Helvetica, sans-serif;
+}
+.gray-Font-body {
+  color: #787878;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: translateY(20px);
+  margin-right: 5px;
 }
 
 .grid-container-Share {
@@ -93,7 +102,7 @@
   margin-bottom: 20px;
 }
 
-.sharebutton {
+.share-button {
   border: none;
   height: 30px;
   width: 280px;
@@ -104,18 +113,18 @@
   margin-left: auto;
 }
 
-.grid-container-AverageCustomerRatings-top-component {
+.grid-container-Average-Customer-Ratings-top-component {
   display: grid;
   max-width: 1200px;
   grid-template-columns: auto auto;
 }
 
-.grid-container-AverageCustomerRatings {
+.grid-container-Average-Customer-Ratings {
   margin-top: 50px;
   display: grid;
   grid-template-columns: 120px 200px auto;
 }
-.centerContent {
+.center-Content {
   display: flex;
   align-items: center;
 }
@@ -135,7 +144,7 @@
   font-size: 14px;
   transform: translateY(15px);
 }
-.averageCustomerRating{
+.average-Customer-Rating{
   color: #787878;
   font-family: Arial;
 }
@@ -178,7 +187,7 @@
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
-.ratingsText {
+.ratings-Text {
   color: #787878;
   font-size: 15px;
   padding: 0px;
@@ -187,7 +196,7 @@
   transform: translateY(15px);
 }
 
-.ratingsText-Side {
+.ratings-Text-Side {
   color: #787878;
   font-size: 15px;
   padding: 0px;
@@ -200,15 +209,17 @@
   max-width: 1500px;
   display: grid;
   grid-template-columns: auto 400px ;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0px;
 }
 
 .grid-container-helpful{
+  margin-top: 999px;
   max-width: 200px;
   display: grid;
-  grid-template-columns: 65px 75px 75px 65px;
+  grid-template-columns: auto auto auto auto;
   text-align: left;
   padding: 0px;
   margin: 0px;
@@ -222,13 +233,15 @@
   margin-top: 70px;
 }
 
-.helpfulButtons {
+.helpfull-Buttons {
+  margin-left: 5px;
   border: none;
   height: 20px;
   width: 70px;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
-  
+  font-weight: 550;
+  transform: translateY(-3px);
 }
 
 .margin-padding {

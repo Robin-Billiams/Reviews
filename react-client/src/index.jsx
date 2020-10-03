@@ -54,6 +54,14 @@ class ReviewsModule extends React.Component {
         )
     }
 
+    helpfullClick(param, item) {
+        console.log(param, item)
+        axios.patch('/productID',{"updateValue": {"_id": item, "updateVal": param}})
+        .then(response => {
+            console.log(response)
+        })
+    }
+
 
 
     render() {
@@ -61,14 +69,14 @@ class ReviewsModule extends React.Component {
         return <div>Error: {this.state.error.message}</div>
         } else {
             return (
-                <div className="topContainer"> 
+                <div className="top-Container"> 
                     <OverAllRatings rating={this.state.rating} currentList={this.state.currentList}/>
                     <SearchBar/>
                     <div>
                         <AverageCustomerRatings currentList={this.state.currentList} rating={this.state.rating}/>
                     </div>
                     <div>
-                        <Reviews reviews={this.state.currentList}/>
+                        <Reviews helpfullClick={this.helpfullClick.bind(this)} reviews={this.state.currentList}/>
                     </div>
                 </div>
             )

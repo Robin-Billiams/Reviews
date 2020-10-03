@@ -18,7 +18,7 @@ function FeaturesOverall(props) {
         <div className="grid-container-Ratings">
             <div className="grid-container-Ratings-overall">
                 <div className="grid-container-Ratings-overall-text"> Features</div>
-                <div className="centerContent">
+                <div className="center-Content">
                     <Rating
                         initialRating={averageFeatureCalc('Features')}
                         emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#cecece"}}/>}
