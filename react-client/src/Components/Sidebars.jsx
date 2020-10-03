@@ -9,43 +9,43 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
     return (
-        <div className="grid-container-Ratings">
+        <div className="grid-container-Ratings-Side">
             <div className="grid-container-Ratings-Spacing">
-            <div className="ratingsText"> Features</div>
+            <div className="ratingsText-Side"> Features</div>
                 <Rating
                     initialRating={props.ratings.Features}
-                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#cecece"}}/>}
-                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#fdd361"} }/>}
+                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#cecece"}}/>}
+                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#fdd361"} }/>}
                     fractions={1000}
                     readonly
                 />
             </div>
             <div className="grid-container-Ratings-Spacing">
-                <div className="ratingsText"> Performance</div>
+                <div className="ratingsText-Side"> Performance</div>
                 <Rating
                     initialRating={props.ratings.Performance}
-                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#cecece", margin: "0px"}}/>}
-                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#fdd361"} }/>}
+                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#cecece", margin: "0px"}}/>}
+                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#fdd361"} }/>}
                     fractions={1000}
                     readonly
                 />
             </div>
             <div className="grid-container-Ratings-Spacing">
-            <   div  className="ratingsText"> Design</div>
+            <   div  className="ratingsText-Side"> Design</div>
                 <Rating
                     initialRating={props.ratings.Design}
-                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#cecece"}}/>}
-                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#fdd361"} }/>}
+                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#cecece"}}/>}
+                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#fdd361"} }/>}
                     fractions={1000}
                     readonly
                 />
             </div>
             <div className="grid-container-Ratings-Spacing">
-                <div className="ratingsText"> Value</div>
+                <div className="ratingsText-Side"> Value</div>
                 <Rating
                     initialRating={props.ratings.Value}
-                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#cecece"}}/>}
-                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#fdd361"} }/>}
+                    emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#cecece"}}/>}
+                    fullSymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#fdd361"} }/>}
                     fractions={1000}
                     readonly
                 />

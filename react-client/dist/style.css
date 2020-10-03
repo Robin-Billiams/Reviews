@@ -159,6 +159,17 @@
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.grid-container-Ratings-Side {
+  display: grid;
+  grid-template-rows: 50px 50px 50px 50px;
+  font-size: 70px;
+  grid-row-gap: 0px;
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .grid-container-Ratings-Spacing {
   display: grid;
   grid-template-rows: auto auto auto auto ;
@@ -174,6 +185,15 @@
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
   transform: translateY(15px);
+}
+
+.ratingsText-Side {
+  color: #787878;
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: translateY(25px);
 }
 
 .grid-container-Ratings-Body{
