@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import OverAllRatings from './Components/OverAllRatings.jsx';
 import SearchBar from './Components/SearchBar.jsx'
 import Reviews from './Components/Reviews.jsx'
+import AverageCustomerRatings from './Components/AverageCustomerRatings.jsx'
 
 class ReviewsModule extends React.Component {
     constructor() {
@@ -60,12 +61,11 @@ class ReviewsModule extends React.Component {
         return <div>Error: {this.state.error.message}</div>
         } else {
             return (
-                <div> 
+                <div className="topContainer"> 
                     <OverAllRatings rating={this.state.rating} currentList={this.state.currentList}/>
                     <SearchBar/>
                     <div>
-                        <div>Reviews</div>
-                        <div>two conatiners with number of reviews for each star on the left, and avergae custome ratings</div>
+                        <AverageCustomerRatings currentList={this.state.currentList} rating={this.state.rating}/>
                     </div>
                     <div>
                         <Reviews reviews={this.state.currentList}/>
