@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   } from '@fortawesome/free-solid-svg-icons';
 
 function AverageCustomerReviews(props) {
-    console.log(props)
     let ratings ={1:0, 2:0, 3:0, 4:0, 5:0}
     let ratingCalc =()=> {
         props.currentList.map(item => {
@@ -16,13 +15,10 @@ function AverageCustomerReviews(props) {
             num += item.ratings.Performance
             num += item.ratings.Value
             num = num/4
-            console.log(num)
             ratings[Math.ceil(num)]++
         })
     }
     ratingCalc()
-    console.log(ratings)
-    console.log((ratings[3]/props.currentList.length)*5)
    return(
     <div className="grid-container-★">
         <div className="grid-container-Ratings-★">
