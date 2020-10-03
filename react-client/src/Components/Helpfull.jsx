@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 class Helpfull  extends React.Component{
     constructor(props) {
         super(props);

@@ -1,5 +1,5 @@
 import React from 'react';
-var moment = require('moment');
+const moment = require('moment');
 import Rating from 'react-rating';
 import Sidebars from './Sidebars.jsx'
 import Helpfull from './Helpfull.jsx'
@@ -10,9 +10,6 @@ import {
 
 
 function Reviews(props) {
-    function onClike() {
-        console.log('hi')
-    }
     return (
         <div className="Reviews-conatiner">
             {props.reviews.map((review, index)=> {

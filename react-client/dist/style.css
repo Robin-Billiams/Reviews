@@ -1,10 +1,13 @@
-.all-The-font {
+.all-the-font {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .top-Container {
+  max-width: 2000px;
   margin-left: 100px;
   margin-right: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 
