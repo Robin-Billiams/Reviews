@@ -61,7 +61,7 @@ class ReviewsModule extends React.Component {
         return <div>Error: {this.state.error.message}</div>
         } else {
             return (
-                <div className="topContainer"> 
+                <div className="top-Container"> 
                     <OverAllRatings rating={this.state.rating} currentList={this.state.currentList}/>
                     <SearchBar/>
                     <div>

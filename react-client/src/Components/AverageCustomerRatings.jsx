@@ -12,27 +12,27 @@ function AverageCustomerRatings(props) {
         <div>
             <div className="grid-container-Share">
                 <div className="bold" style={{fontSize: "30px", fontFamily: "Arial"}}>Reviews</div> 
-                <button className="sharebutton">SHARE YOUR PRODUCT EXPERIENCE</button>
+                <button className="share-button">SHARE YOUR PRODUCT EXPERIENCE</button>
                 
             </div>
-            <div className="grid-container-AverageCustomerRatings-top-component">
+            <div className="grid-container-Average-Customer-Ratings-top-component">
                 <div>
                     <div>
-                        <div className="averageCustomerRating" style={{marginBottom: "10px"}}>
+                        <div className="average-Customer-Rating" style={{marginBottom: "10px"}}>
                             Ratings Snapshot
                         </div>
-                        <div className="averageCustomerRating" style={{marginBottom: "10px"}}>
+                        <div className="average-Customer-Rating" style={{marginBottom: "10px"}}>
                             Select a row below to filter reviews.
                         </div>
                         <AverageCustomerReviews currentList ={props.currentList}/>
                     </div>
                 </div>
                 <div>
-                    <div className="averageCustomerRating">
+                    <div className="average-Customer-Rating">
                         Average Customer Ratings
                     </div>
-                    <div className="grid-container-AverageCustomerRatings"> 
-                        <div className="averageCustomerRating">
+                    <div className="grid-container-Average-Customer-Ratings"> 
+                        <div className="average-Customer-Rating">
                             Overall    
                         </div>  
                         <div>
@@ -44,7 +44,7 @@ function AverageCustomerRatings(props) {
                                 readonly
                             />        
                         </div>
-                        <div className="averageCustomerRating">
+                        <div className="average-Customer-Rating">
                             {props.rating}
                         </div>
                     </div>

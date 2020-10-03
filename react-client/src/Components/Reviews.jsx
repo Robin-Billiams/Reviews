@@ -38,19 +38,19 @@ function Reviews(props) {
                                 />
                             </div>
                             <div className="bold">{review.author}</div>
-                            <div className="grayFont"> {moment(review.createdAt).fromNow()}</div>
+                            <div className="gray-Font"> {moment(review.createdAt).fromNow()}</div>
                         </div>
                         <div>
                             <div className="capitalize">{review.title}</div>
                             <div className="grid-container-Ratings-Body">
-                                <div className="grayFont" style={{fontSize: "15px"}}>{review.body}</div>
+                                <div className="gray-Font-body" style={{fontSize: "15px"}}>{review.body}</div>
                                 <Sidebars ratings = {review.ratings}/>
                             </div>
                             <div className="grid-container-helpful"> 
                                 <div >Helpful?</div>
-                                <button className="helpfulButtons">Yes . {<span style={{color: "red"}}> {review.yes} </span>}</button>
-                                <button className="helpfulButtons">No . {<span style={{color: "red"}}> {review.no} </span>}</button>
-                                <button className="helpfulButtons">Report</button>
+                                <button className="helpfull-Buttons">Yes . {<span style={{color: "red"}}> {review.yes} </span>}</button>
+                                <button className="helpfull-Buttons">No . {<span style={{color: "red"}}> {review.no} </span>}</button>
+                                <button className="helpfull-Buttons">Report</button>
                             </div>
                         </div>
                     </div>

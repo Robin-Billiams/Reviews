@@ -27,7 +27,7 @@ function AverageCustomerReviews(props) {
     <div className="grid-container-★">
         <div className="grid-container-Ratings-★">
             <div className="grid-container-Ratings-overall-text"> 5 ★</div>
-            <div className="centerContent">
+            <div className="center-Content">
                 <Rating
                     initialRating={(ratings[5]/props.currentList.length)*5}
                     emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(1.1,0.2)", color: "#cecece"}}/>}
