@@ -1,6 +1,7 @@
 const db  = require('./index.js');
 const Review = require('./Review.js');
 const faker = require('faker');
+const mongoose = require('mongoose');
 
 const sampleReviews = [];
 
@@ -34,7 +35,13 @@ randomSet()
 
 const insertSampleReviews = function() {
     Review.create(sampleReviews)
-      .then(() => db.disconnect());
+      .then(() => mongoose.connection.close())
+      .catch(error => console.log(error))
   };
   
   insertSampleReviews();
+
+
+// in case youre having trouble try this commands to uninstall and reinstall the dependencies
+  //rm -rf node_modules
+  //npm install
