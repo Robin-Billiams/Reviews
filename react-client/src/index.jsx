@@ -11,19 +11,21 @@ class ReviewsModule extends React.Component {
         super();
         this.state = {
             error: null,
-            listNumber: 1,
+            listNumber: 0,
             currentList: [],
             reviewsLoaded: false,
-            rating: 1
+            rating: 5
         }
     }
 
-    listNumberGenerator() {
-        console.log("loop back around to maybe parse the url?")
-    }
 
     componentDidMount() {
-        axios.get('/productID', {params:{"productID": this.state.listNumber}})
+        let prodId = this.state.listNumber
+        if(window.location.search) {
+            console.log('this is the location', window.location.search.slice(1))
+            prodId = window.location.search.slice(1)
+        }
+        axios.get('/productID', {params:{"productID": prodId}})
         .then(
             (response) => {
                 let rate = 0

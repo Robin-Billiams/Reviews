@@ -42,6 +42,6 @@ const insertSampleReviews = function() {
   insertSampleReviews();
 
 
-// in case youre having trouble try this commands to uninstall and reinstall the dependencies
+// in case youre having trouble try this commands to uninstall and reinstall the dependenciesedds
   //rm -rf node_modules
   //npm install
