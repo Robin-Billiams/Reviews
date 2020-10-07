@@ -12,7 +12,6 @@ class Helpfull  extends React.Component{
         }
     }
     clickHandler(param) {
-        console.log('hit')
         if (param === 'yes') {
             this.setState({
                 yes: this.state.yes + 1

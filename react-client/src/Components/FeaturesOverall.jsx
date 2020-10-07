@@ -8,10 +8,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 function FeaturesOverall(props) {
     let averageFeatureCalc = (feature) => {
         let num = 0
-        props.currentlist.map(item => {
-            num+= item.ratings[feature]
-        })
-        num = (num/props.currentlist.length).toFixed(1)
+        if (props.currentlist.length > 0) {
+            props.currentlist.map(item => {
+                num+= item.ratings[feature]
+            })
+            num = (num/props.currentlist.length).toFixed(1)
+        }
         return num
     }
       return (

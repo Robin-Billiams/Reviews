@@ -22,24 +22,25 @@ class ReviewsModule extends React.Component {
 
     componentDidMount() {
         let prodId = this.state.listNumber
-        // if(window.location.search) {
-        //     console.log('this is the location', window.location.search.slice(1))
-        //     prodId = window.location.search.slice(1)
-        // }
+        if(window.location.search) {
+            prodId = window.location.search.slice(1)
+        }
         axios.get(server, {params:{"productID": prodId}})
         .then(
             (response) => {
                 let rate = 0
                 function ratingGen () {
-                    response.data.map(rating => {
-                        let overall = 0;
-                        overall += rating.ratings.Design
-                        overall += rating.ratings.Features
-                        overall += rating.ratings.Performance
-                        overall += rating.ratings.Value
-                        rate += overall/4
-                    })
-                    rate = (rate/response.data.length).toFixed(1)
+                    if (response.data.length > 0) {
+                        response.data.map(rating => {
+                            let overall = 0;
+                            overall += rating.ratings.Design
+                            overall += rating.ratings.Features
+                            overall += rating.ratings.Performance
+                            overall += rating.ratings.Value
+                            rate += overall/4
+                        })
+                        rate = (rate/response.data.length).toFixed(1)
+                    }
                 }
                 ratingGen()
                 this.setState({
@@ -58,7 +59,6 @@ class ReviewsModule extends React.Component {
     }
 
     helpfullClick(param, item) {
-        console.log(param, item)
         axios.patch(server,{"updateValue": {"_id": item, "updateVal": param}})
         .then(response => {
             console.log(response)
