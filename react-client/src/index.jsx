@@ -5,6 +5,7 @@ import OverAllRatings from './Components/OverAllRatings.jsx';
 import SearchBar from './Components/SearchBar.jsx'
 import Reviews from './Components/Reviews.jsx'
 import AverageCustomerRatings from './Components/AverageCustomerRatings.jsx'
+const server = 'http://localhost:3001/productID'
 
 class ReviewsModule extends React.Component {
     constructor() {
@@ -21,11 +22,11 @@ class ReviewsModule extends React.Component {
 
     componentDidMount() {
         let prodId = this.state.listNumber
-        if(window.location.search) {
-            console.log('this is the location', window.location.search.slice(1))
-            prodId = window.location.search.slice(1)
-        }
-        axios.get('/productID', {params:{"productID": prodId}})
+        // if(window.location.search) {
+        //     console.log('this is the location', window.location.search.slice(1))
+        //     prodId = window.location.search.slice(1)
+        // }
+        axios.get(server, {params:{"productID": prodId}})
         .then(
             (response) => {
                 let rate = 0
@@ -58,7 +59,7 @@ class ReviewsModule extends React.Component {
 
     helpfullClick(param, item) {
         console.log(param, item)
-        axios.patch('/productID',{"updateValue": {"_id": item, "updateVal": param}})
+        axios.patch(server,{"updateValue": {"_id": item, "updateVal": param}})
         .then(response => {
             console.log(response)
         })

@@ -1,11 +1,13 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 
 const bodyParser = require('body-parser');
 const Review = require('../database-mongodb/Review.js');
 
 //MIDDLEWARE
 app.use(bodyParser.json())
+app.use(cors())
 // if unsure how the code is working or what it requires check this gist https://gist.github.com/letgas055/3173a744411f52a68f5d8e8c61f3da3c
 app.use(express.static(__dirname + '/../react-client/dist'))
 //GET//
