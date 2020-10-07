@@ -1,23 +1,30 @@
-let path = require('path');
+
+
+const path = require('path');
+
+const SRC_DIR = path.join(__dirname, '/react-client/src');
+const DIST_DIR = path.join(__dirname, '/react-client/dist');
 
 module.exports = {
-  entry: "./react-client/src/index.jsx",
+  entry: `${SRC_DIR}/index.jsx`,
   output: {
-    path: path.resolve(__dirname, "./react-client/dist"),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    path: DIST_DIR,
   },
   module: {
     rules: [
       {
         test: /\.jsx?/,
-        exclude: /node_modules/,
-        use: {
-            loader: 'babel-loader',
-            query: {
-              presets: ["@babel/preset-react"]
-            }
-        }
+        include: SRC_DIR,
+        loader: 'babel-loader',
+        query: {
+          presets: ['@babel/preset-react', '@babel/preset-env'],
+        },
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
       }
-    ]
-  }
+    ],
+  },
 };

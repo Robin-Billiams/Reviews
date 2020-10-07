@@ -5,6 +5,7 @@ import OverAllRatings from './Components/OverAllRatings.jsx';
 import SearchBar from './Components/SearchBar.jsx'
 import Reviews from './Components/Reviews.jsx'
 import AverageCustomerRatings from './Components/AverageCustomerRatings.jsx'
+import styles from'./style.css'
 const server = 'http://localhost:3001/productID'
 
 class ReviewsModule extends React.Component {
