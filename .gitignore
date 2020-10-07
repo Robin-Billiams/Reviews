@@ -2,6 +2,5 @@
 .DS_Store
 bower_components
 bundle.js
-node_modules
 package-lock.json
 .eslintrc.js
