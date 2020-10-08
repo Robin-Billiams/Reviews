@@ -5,7 +5,8 @@ import OverAllRatings from './Components/OverAllRatings.jsx';
 import SearchBar from './Components/SearchBar.jsx'
 import Reviews from './Components/Reviews.jsx'
 import AverageCustomerRatings from './Components/AverageCustomerRatings.jsx'
-import styles from'./style.css'
+import './style.css'
+import {topContainer} from'./style.css'
 const server = 'http://localhost:3001/productID'
 
 class ReviewsModule extends React.Component {
@@ -73,7 +74,7 @@ class ReviewsModule extends React.Component {
         return <div>Error: {this.state.error.message}</div>
         } else {
             return (
-                <div className="top-Container"> 
+                <div className={topContainer}> 
                     <OverAllRatings rating={this.state.rating} currentList={this.state.currentList}/>
                     <SearchBar/>
                     <div>

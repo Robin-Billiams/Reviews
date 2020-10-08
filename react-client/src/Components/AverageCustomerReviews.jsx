@@ -1,5 +1,6 @@
 import React from 'react'
 import Rating from 'react-rating';
+import {gridContainerStar, gridContainerRatingsStar, gridContainerRatingsOverallText, centerContent} from '../style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import {
     faSquare as faSquareSolid
@@ -20,10 +21,10 @@ function AverageCustomerReviews(props) {
     }
     ratingCalc()
    return(
-    <div className="grid-container-★">
-        <div className="grid-container-Ratings-★">
-            <div className="grid-container-Ratings-overall-text"> 5 ★</div>
-            <div className="center-Content">
+    <div className={gridContainerStar}>
+        <div className={gridContainerRatingsStar}>
+            <div className={gridContainerRatingsOverallText}> 5 ★</div>
+            <div className={centerContent}>
                 <Rating
                     initialRating={(ratings[5]/props.currentList.length)*5}
                     emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(1.1,0.2)", color: "#cecece"}}/>}
@@ -32,10 +33,10 @@ function AverageCustomerReviews(props) {
                     readonly
                 />
             </div>
-            <div className="grid-container-Ratings-overall-text">{ratings[5]}</div>
+            <div className={gridContainerRatingsOverallText}>{ratings[5]}</div>
         </div>
-        <div className="grid-container-Ratings-★">
-            <div className="grid-container-Ratings-overall-text"> 4 ★</div>
+        <div className={gridContainerRatingsStar}>
+            <div className={gridContainerRatingsOverallText}> 4 ★</div>
             <div>
                 <Rating
                     initialRating={(ratings[4]/props.currentList.length)*5}
@@ -45,10 +46,10 @@ function AverageCustomerReviews(props) {
                     readonly
                 />
             </div>
-            <div className="grid-container-Ratings-overall-text">{ratings[4]}</div>
+            <div className={gridContainerRatingsOverallText}>{ratings[4]}</div>
         </div>
-        <div className="grid-container-Ratings-★">
-            <div className="grid-container-Ratings-overall-text"> 3 ★</div>
+        <div className={gridContainerRatingsStar}>
+            <div className={gridContainerRatingsOverallText}> 3 ★</div>
             <div>
                 <Rating
                     initialRating={(ratings[3]/props.currentList.length)*5}
@@ -58,10 +59,10 @@ function AverageCustomerReviews(props) {
                     readonly
                 />
             </div>
-            <div className="grid-container-Ratings-overall-text">{ratings[3]}</div>
+            <div className={gridContainerRatingsOverallText}>{ratings[3]}</div>
         </div>
-        <div className="grid-container-Ratings-★">
-            <div className="grid-container-Ratings-overall-text"> 2 ★</div>
+        <div className={gridContainerRatingsStar}>
+            <div className={gridContainerRatingsOverallText}> 2 ★</div>
             <div>
                 <Rating
                     initialRating={(ratings[2]/props.currentList.length)*5}
@@ -71,10 +72,10 @@ function AverageCustomerReviews(props) {
                     readonly
                 />
             </div>
-            <div className="grid-container-Ratings-overall-text">{ratings[2]}</div>
+            <div className={gridContainerRatingsOverallText}>{ratings[2]}</div>
         </div>
-        <div className="grid-container-Ratings-★">
-            <div className="grid-container-Ratings-overall-text"> 1 ★</div>
+        <div className={gridContainerRatingsStar}>
+            <div className={gridContainerRatingsOverallText}> 1 ★</div>
             <div>
                 <Rating
                     initialRating={(ratings[1]/props.currentList.length)*5}
@@ -84,7 +85,7 @@ function AverageCustomerReviews(props) {
                     readonly
                 />
             </div>
-            <div className="grid-container-Ratings-overall-text">{ratings[1]}</div>
+            <div className={gridContainerRatingsOverallText}>{ratings[1]}</div>
         </div>
     </div>
     )

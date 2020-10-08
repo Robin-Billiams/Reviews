@@ -1,4 +1,5 @@
 import React from 'react'
+import {gridContainerHelpful, helpfullButtons} from '../style.css'
 
 class Helpfull  extends React.Component{
     constructor(props) {
@@ -32,28 +33,28 @@ class Helpfull  extends React.Component{
     render() {
         if (!this.state.Report) {
             return (
-                <div className="grid-container-helpful"> 
+                <div className={gridContainerHelpful}> 
                     <div >Helpful?</div>
                     <button  onClick={()=> this.clickHandler('yes')} 
                    
-                    className="helpfull-Buttons">
+                    className={helpfullButtons}>
                         Yes {<span>&#183;</span>} {<span style={{color: "red"}}> {this.state.yes} </span>}
                         </button>
-                    <button onClick={ ()=> this.clickHandler('no')} className="helpfull-Buttons">No {<span>&#183;</span>} {<span style={{color: "red"}}> {this.state.no} </span>}</button>
-                    <button onClick={()=>this.Report()} className="helpfull-Buttons">Report</button>
+                    <button onClick={ ()=> this.clickHandler('no')} className={helpfullButtons}>No {<span>&#183;</span>} {<span style={{color: "red"}}> {this.state.no} </span>}</button>
+                    <button onClick={()=>this.Report()} className={helpfullButtons}>Report</button>
                 </div>
             )
         } else {
             return (
-                <div className="grid-container-helpful"> 
+                <div className={gridContainerHelpful}> 
                     <div >Helpful?</div>
                     <button  onClick={()=> this.clickHandler('yes')} 
                    
-                    className="helpfull-Buttons">
+                    className={helpfullButtons}>
                         Yes {<span>&#183;</span>} {<span style={{color: "red"}}> {this.state.yes} </span>}
                         </button>
-                    <button onClick={ ()=> this.clickHandler('no')} className="helpfull-Buttons">No {<span>&#183;</span>} {<span style={{color: "red"}}> {this.state.no} </span>}</button>
-                    <div className="helpfull-Buttons" style={{transform: "translatey(0px)"}}>Reported</div>
+                    <button onClick={ ()=> this.clickHandler('no')} className={helpfullButtons}>No {<span>&#183;</span>} {<span style={{color: "red"}}> {this.state.no} </span>}</button>
+                    <div className={helpfullButtons} style={{transform: "translatey(0px)"}}>Reported</div>
                 </div>
             )
         }

@@ -1,8 +1,8 @@
-.all-the-font {
+.foo__style__all-the-font {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.top-Container {
+.foo__style__top-Container {
   max-width: 2000px;
   margin-left: 100px;
   margin-right: 100px;
@@ -11,7 +11,7 @@
 }
 
 
-.search-Button {
+.foo__style__search-Button {
   border: none;
   height: 35px;
   width: 90px;
@@ -19,7 +19,7 @@
   font-size: 20px;
 }
 
-.search-borders{
+.foo__style__search-borders{
   border-top-color: #eeeeee;
   border-top-style: solid;
   border-bottom-color: #eeeeee;
@@ -27,7 +27,7 @@
   border-width: thin;
 }
 
-.search-Bar {
+.foo__style__search-Bar {
   height: 30px;
   border: 1px solid #eeeeee;
   border-radius: 3px;
@@ -37,10 +37,10 @@
   width: 500px;
 }
 
-.bold{
+.foo__style__bold{
   font-weight: 400; 
 }
-.capitalize {
+.foo__style__capitalize {
   text-transform: capitalize;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 10px;
@@ -48,11 +48,11 @@
   font-weight: 500;
 }
 
-.header1 {
+.foo__style__header1 {
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
 }
-.header2 {
+.foo__style__header2 {
   border-left-style: solid;
   border-left-color: #dcded9;
   text-align: left;
@@ -62,7 +62,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.grid-container-top {
+.foo__style__grid-container-top {
   max-width: 215px;
   display: grid;
   grid-template-columns: auto auto;
@@ -75,7 +75,7 @@
   margin-top: 60px;
 }
 
-.grid-container-reviews-top {
+.foo__style__grid-container-reviews-top {
   max-width: 290px;
   display: inline-grid;
   grid-auto-flow: column;
@@ -87,11 +87,11 @@
   font-family: Arial, Helvetica, sans-serif;
   
 }
-.gray-Font {
+.foo__style__gray-Font {
   color: #787878;
   font-family: Arial, Helvetica, sans-serif;
 }
-.gray-Font-body {
+.foo__style__gray-Font-body {
   color: #787878;
   font-family: Arial, Helvetica, sans-serif;
   transform: translateY(20px);
@@ -99,14 +99,14 @@
 }
 
 
-.grid-container-Share {
+.foo__style__grid-container-Share {
   display: grid;
   grid-template-columns: auto auto;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.share-button {
+.foo__style__share-button {
   border: none;
   height: 30px;
   width: 280px;
@@ -117,43 +117,43 @@
   margin-left: auto;
 }
 
-.grid-container-Average-Customer-Ratings-top-component {
+.foo__style__grid-container-Average-Customer-Ratings-top-component {
   display: grid;
   max-width: 1200px;
   grid-template-columns: auto auto;
 }
 
-.grid-container-Average-Customer-Ratings {
+.foo__style__grid-container-Average-Customer-Ratings {
   margin-top: 50px;
   display: grid;
   grid-template-columns: 120px 200px auto;
 }
-.center-Content {
+.foo__style__center-Content {
   display: flex;
   align-items: center;
 }
 
-.grid-container-Ratings-star{
+.foo__style__grid-container-Ratings-star{
   display: grid;
   grid-template-columns: 50px 200px auto;
 }
 
-.grid-container-Ratings-overall{
+.foo__style__grid-container-Ratings-overall{
   display: grid;
   grid-template-columns: 120px 200px auto;
 }
-.grid-container-Ratings-overall-text {
+.foo__style__grid-container-Ratings-overall-text {
   color: #787878;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   transform: translateY(15px);
 }
-.average-Customer-Rating{
+.foo__style__average-Customer-Rating{
   color: #787878;
   font-family: Arial;
 }
 
-.grid-container-star {
+.foo__style__grid-container-star {
   display: grid;
   grid-template-rows: 30px 30px 30px 30px 30px;
   font-size: 40px;
@@ -163,7 +163,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.grid-container-Ratings {
+.foo__style__grid-container-Ratings {
   display: grid;
   grid-template-rows: 30px 30px 30px 30px;
   font-size: 40px;
@@ -173,7 +173,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.grid-container-Ratings-Side {
+.foo__style__grid-container-Ratings-Side {
   display: grid;
   grid-template-rows: 50px 50px 50px 50px;
   font-size: 70px;
@@ -183,7 +183,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.grid-container-Ratings-Spacing {
+.foo__style__grid-container-Ratings-Spacing {
   display: grid;
   grid-template-rows: auto auto auto auto ;
   grid-row-gap: 0px;
@@ -191,7 +191,7 @@
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
-.ratings-Text {
+.foo__style__ratings-Text {
   color: #787878;
   font-size: 15px;
   padding: 0px;
@@ -200,7 +200,7 @@
   transform: translateY(15px);
 }
 
-.ratings-Text-Side {
+.foo__style__ratings-Text-Side {
   color: #787878;
   font-size: 15px;
   padding: 0px;
@@ -209,7 +209,7 @@
   transform: translateY(25px);
 }
 
-.grid-container-Ratings-Body{
+.foo__style__grid-container-Ratings-Body{
   max-width: 1500px;
   display: grid;
   grid-template-columns: auto 400px ;
@@ -219,7 +219,7 @@
   margin-top: 0px;
 }
 
-.grid-container-helpful{
+.foo__style__grid-container-helpful{
   margin-top: 999px;
   max-width: 200px;
   display: grid;
@@ -233,11 +233,11 @@
   margin-bottom: 45px;
 }
 
-.Reviews-conatiner {
+.foo__style__Reviews-conatiner {
   margin-top: 70px;
 }
 
-.helpfull-Buttons {
+.foo__style__helpfull-Buttons {
   margin-left: 5px;
   border: none;
   height: 20px;
@@ -248,9 +248,10 @@
   transform: translateY(-3px);
 }
 
-.margin-padding {
+.foo__style__margin-padding {
   padding:0px;
   margin:0px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 

@@ -3,6 +3,7 @@ const moment = require('moment');
 import Rating from 'react-rating';
 import Sidebars from './Sidebars.jsx'
 import Helpfull from './Helpfull.jsx'
+import {reviewsConatiner , gridContainerReviewsTop, bold, grayFont, capitalize, gridContainerRatingsBody, grayFontBody} from '../style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faStar as faStarSolid
@@ -11,7 +12,7 @@ import {
 
 function Reviews(props) {
     return (
-        <div className="Reviews-conatiner">
+        <div className={reviewsConatiner}>
             {props.reviews.map((review, index)=> {
                 let rate = 0
                 function raterInd(){    
@@ -26,7 +27,7 @@ function Reviews(props) {
                 raterInd()
                 return (
                     <div key={index}>
-                        <div className="grid-container-reviews-top">
+                        <div className={gridContainerReviewsTop}>
                             <div>
                                 <Rating
                                 initialRating={rate}
@@ -36,13 +37,13 @@ function Reviews(props) {
                                 readonly
                                 />
                             </div>
-                            <div className="bold">{review.author}</div>
-                            <div className="gray-Font"> {<span>&#183;</span>} {moment(review.createdAt).fromNow()}</div>
+                            <div className={bold}>{review.author}</div>
+                            <div className={grayFont}> {<span>&#183;</span>} {moment(review.createdAt).fromNow()}</div>
                         </div>
                         <div>
-                            <div className="capitalize">{review.title}</div>
-                            <div className="grid-container-Ratings-Body">
-                                <div className="gray-Font-body" style={{fontSize: "15px"}}>{review.body}</div>
+                            <div className={capitalize}>{review.title}</div>
+                            <div className={gridContainerRatingsBody}>
+                                <div className={grayFontBody} style={{fontSize: "15px"}}>{review.body}</div>
                                 <Sidebars ratings = {review.ratings}/>
                             </div>
                         </div>
