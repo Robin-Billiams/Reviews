@@ -1,5 +1,6 @@
 import React from 'react'
 import Rating from 'react-rating';
+import {gridContainerRatingsSide, gridContainerRatingsSpacing, ratingsTextSide} from '../style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import {
     faSquare as faSquareSolid
@@ -9,9 +10,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
     return (
-        <div className="grid-container-Ratings-Side">
-            <div className="grid-container-Ratings-Spacing">
-            <div className="ratings-Text-Side"> Features</div>
+        <div className={gridContainerRatingsSide}>
+            <div className={gridContainerRatingsSpacing}>
+            <div className={ratingsTextSide}> Features</div>
                 <Rating
                     initialRating={props.ratings.Features}
                     emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#cecece"}}/>}
@@ -20,8 +21,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
                     readonly
                 />
             </div>
-            <div className="grid-container-Ratings-Spacing">
-                <div className="ratings-Text-Side"> Performance</div>
+            <div className={gridContainerRatingsSpacing}>
+                <div className={ratingsTextSide}> Performance</div>
                 <Rating
                     initialRating={props.ratings.Performance}
                     emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#cecece", margin: "0px"}}/>}
@@ -30,8 +31,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
                     readonly
                 />
             </div>
-            <div className="grid-container-Ratings-Spacing">
-            <   div  className="ratings-Text-Side"> Design</div>
+            <div className={gridContainerRatingsSpacing}>
+            <   div  className={ratingsTextSide}> Design</div>
                 <Rating
                     initialRating={props.ratings.Design}
                     emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#cecece"}}/>}
@@ -40,8 +41,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
                     readonly
                 />
             </div>
-            <div className="grid-container-Ratings-Spacing">
-                <div className="ratings-Text-Side"> Value</div>
+            <div className={gridContainerRatingsSpacing}>
+                <div className={ratingsTextSide}> Value</div>
                 <Rating
                     initialRating={props.ratings.Value}
                     emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.1)", color: "#cecece"}}/>}

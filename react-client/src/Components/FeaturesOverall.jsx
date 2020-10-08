@@ -1,5 +1,6 @@
 import React from 'react'
 import Rating from 'react-rating';
+import {gridContainerRatings, gridContainerRatingsOverallText, gridContainerRatingsOverall, centerContent} from '../style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import {
     faSquare as faSquareSolid
@@ -17,10 +18,10 @@ function FeaturesOverall(props) {
         return num
     }
       return (
-        <div className="grid-container-Ratings">
-            <div className="grid-container-Ratings-overall">
-                <div className="grid-container-Ratings-overall-text"> Features</div>
-                <div className="center-Content">
+        <div className={gridContainerRatings}>
+            <div className={gridContainerRatingsOverall}>
+                <div className={gridContainerRatingsOverallText}> Features</div>
+                <div className={centerContent}>
                     <Rating
                         initialRating={averageFeatureCalc('Features')}
                         emptySymbol={<FontAwesomeIcon icon={faSquareSolid} style={{ transform: "scale(0.99,0.2)", color: "#cecece"}}/>}
@@ -29,10 +30,10 @@ function FeaturesOverall(props) {
                         readonly
                     />
                 </div>
-                <div className="grid-container-Ratings-overall-text">{averageFeatureCalc('Features')}</div>
+                <div className={gridContainerRatingsOverallText}>{averageFeatureCalc('Features')}</div>
             </div>
-            <div className="grid-container-Ratings-overall">
-                <div className="grid-container-Ratings-overall-text"> Performance</div>
+            <div className={gridContainerRatingsOverall}>
+                <div className={gridContainerRatingsOverallText}> Performance</div>
                 <div>
                     <Rating
                         initialRating={averageFeatureCalc('Performance')}
@@ -42,10 +43,10 @@ function FeaturesOverall(props) {
                         readonly
                     />
                 </div>
-                <div className="grid-container-Ratings-overall-text">{averageFeatureCalc('Performance')}</div>
+                <div className={gridContainerRatingsOverallText}>{averageFeatureCalc('Performance')}</div>
             </div>
-            <div className="grid-container-Ratings-overall">
-                <div className="grid-container-Ratings-overall-text"> Design</div>
+            <div className={gridContainerRatingsOverall}>
+                <div className={gridContainerRatingsOverallText}> Design</div>
                 <div>
                     <Rating
                         initialRating={averageFeatureCalc('Design')}
@@ -55,10 +56,10 @@ function FeaturesOverall(props) {
                         readonly
                     />
                 </div>
-                <div className="grid-container-Ratings-overall-text">{averageFeatureCalc('Design')}</div>
+                <div className={gridContainerRatingsOverallText}>{averageFeatureCalc('Design')}</div>
             </div>
-            <div className="grid-container-Ratings-overall">
-                <div className="grid-container-Ratings-overall-text"> Value</div>
+            <div className={gridContainerRatingsOverall}>
+                <div className={gridContainerRatingsOverallText}> Value</div>
                 <div>
                     <Rating
                         initialRating={averageFeatureCalc('Value')}
@@ -68,7 +69,7 @@ function FeaturesOverall(props) {
                         readonly
                     />
                 </div>
-                <div className="grid-container-Ratings-overall-text">{averageFeatureCalc('Value')}</div>
+                <div className={gridContainerRatingsOverallText}>{averageFeatureCalc('Value')}</div>
             </div>
         </div>
     )
